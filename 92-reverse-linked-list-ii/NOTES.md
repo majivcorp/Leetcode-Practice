@@ -55,7 +55,8 @@ to handle that case we gonna use one dummy node. So, if left = 1 then our prev w
 Let's look at the code,
 
 Java
-`class Solution {
+`
+class Solution {
     public ListNode reverseBetween(ListNode head, int left, int right) {
         ListNode dummy = new ListNode(0); // created dummy node
         dummy.next = head;
@@ -74,7 +75,8 @@ Java
         }
         return dummy.next;
     }
-};`
+};
+`
 
 
 
