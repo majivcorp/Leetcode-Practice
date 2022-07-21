@@ -75,7 +75,7 @@ Java
         }
         return dummy.next;
     }
-}`
+};`
 
 **ANALYSIS :-**
 
