@@ -1,10 +1,12 @@
 ​To understand this problem let's take an example:
 
+'''
 Input: head = [1,2,10,20,30,40,5], left = 3, right = 6
-Output: [1,2,40,30,20,10,5]
-So, first of all I would like to show you if we do reverse one-by-one then, how it'll gonna looks like
+Output: [1,2,40,30,20,10,5]'''
 
-image
+**So, first of all I would like to show you if we do reverse one-by-one then, how it'll gonna looks like**
+
+![image](https://user-images.githubusercontent.com/44350099/180193153-d85c0b7a-057d-4b16-9303-93522ac0d089.png)
 
 Now, let's talk about how we gonna achieve this result,
 
