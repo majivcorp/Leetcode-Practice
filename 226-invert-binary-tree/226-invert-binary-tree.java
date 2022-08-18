@@ -13,30 +13,19 @@
  *     }
  * }
  */
-//Approach 1: Iterative
+//Approach 2: Recursive
 class Solution {
     public TreeNode invertTree(TreeNode root) {
-        if (root == null) 
-        {
+        //1. If the root is null, return null.
+        if (root == null) {
             return null;
         }
-        
-        Queue<TreeNode> queue = new LinkedList<TreeNode>();
-        
-        queue.add(root);
-        while (!queue.isEmpty()) {
-            TreeNode current = queue.poll();
-            TreeNode temp = current.left;
-            current.left = current.right;
-            current.right = temp;
-            
-            if (current.left != null) {
-                queue.add(current.left);
-            }
-            if (current.right != null) {
-                queue.add(current.right);
-            }
-        }
+    
+        TreeNode right = invertTree(root.right);////2. Recursively invert the left subtree.
+        TreeNode left = invertTree(root.left); //3. Recursively invert the right subtree.
+        //4. Swap the left and right subtrees.
+        root.left = right;
+        root.right = left;
         return root;
     }
 }
