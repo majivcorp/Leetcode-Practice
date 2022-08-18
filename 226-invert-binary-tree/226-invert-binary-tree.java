@@ -43,3 +43,23 @@ class Solution {
         return root;
     }
 }
+
+/*
+    //Approach 2: Recursive
+class Solution {
+    public TreeNode invertTree(TreeNode root) {
+        //1. If the root is null, return null.
+        if (root == null) {
+            return null;
+        }
+    
+        TreeNode right = invertTree(root.right);////2. Recursively invert the left subtree.
+        TreeNode left = invertTree(root.left); //3. Recursively invert the right subtree.
+        //4. Swap the left and right subtrees.
+        root.left = right;
+        root.right = left;
+        return root;
+    }
+}
+//Runtime: 0 ms - Memory Usage: 39.7 MB
+*/
