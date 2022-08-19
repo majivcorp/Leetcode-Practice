@@ -45,9 +45,6 @@ class Solution {
  * The depth is updated at each step.
 */
 
-
-/**
-
 class Solution {
     public int maxDepth(TreeNode root) {
         //1. We initialize a stack with the root node and a depth of 1.
@@ -81,4 +78,4 @@ class Solution {
 //Runtime: 4 ms, faster than 8.96% of Java online submissions for Maximum Depth of Binary Tree.
 //Memory Usage: 44.3 MB, less than 5.65% of Java online submissions for Maximum Depth of Binary Tree.
 
-*/
+
