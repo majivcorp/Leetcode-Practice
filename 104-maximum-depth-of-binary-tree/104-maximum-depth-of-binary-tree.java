@@ -14,40 +14,6 @@
  * }
  */
 
-/**
- * We can either traverse the tree either by Depth-First Search (DFS) strategy 
- * or Breadth-First Search (BFS) strategy.
-*/
-
-//Approach 1: Recursion - Recursive  Depth-First Search (DFS) strategy
-class Solution {
-    public int maxDepth(TreeNode root) {
-        //1. First, we check if the root is None/null. If so, we return 0.
-        if  (root == null) {
-            return 0;
-        }
-        //2. If not, we recursively call the maxDepth function on root.left.
-        else {
-            int left_height = maxDepth(root.left);
-            int right_height =maxDepth(root.right); //3. We do the same for root.right.
-            //4. We return the larger height plus 1.
-            return java.lang.Math.max(left_height, right_height) + 1; 
-        }
-    }
-}
-
-
-//Approach 2: Iteration - Iterative  Depth-First Search (DFS) strategy
-/**
- * start from a stack which contains the root node
- * and the corresponding depth which is 1. 
- * proceed to the iterations: pop the current node out of the stack and push the child nodes.
- * The depth is updated at each step.
-*/
-
-
-/**
-
 class Solution {
     public int maxDepth(TreeNode root) {
         //1. We initialize a stack with the root node and a depth of 1.
@@ -77,4 +43,3 @@ class Solution {
         return depth; //9. We return the depth variable.
     }
 };
-*/
