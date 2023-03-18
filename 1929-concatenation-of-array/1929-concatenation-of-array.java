@@ -10,8 +10,8 @@ class Solution {
         for (int i = 0; i < n; i++) {
             
             //Inside the loop, assign the value `nums[i]` to `ans[i]` and `ans[i + n]`.
-            ans[i] = nums[i];
-            ans[i + n] = nums[i];
+            ans[i] = nums[i]; //Copy the first n elements of nums into the first n elements of ans.
+            ans[i + n] = nums[i]; // Copy the first n elements of nums into the last n elements of ans.
         }
         //Return the `ans` array after completing the loop.
         return ans;
